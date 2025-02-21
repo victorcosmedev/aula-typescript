@@ -104,3 +104,26 @@ function processarResposta(resposta: RespostaServidor){
 
 processarResposta("resposta");
 processarResposta(true);
+
+
+console.log("\nManipulação Avançada de Tipos - Exercício 6");
+type Estudante = {
+    nome: string;
+    curso: string;
+}
+
+type Trabalhador = {
+    empresa: string;
+    cargo: string;
+}
+type EstudanteTrabalhador = Estudante & Trabalhador;
+
+const estudanteTrabalhador: EstudanteTrabalhador = {
+    nome: "Victor",
+    curso: "Análise e Desenvolvimento de Sistemas",
+    empresa: "FIESP",
+    cargo: "Analista de Sistemas",
+}
+
+console.log("Estudante & Trabalhador: ");
+console.log(estudanteTrabalhador);
