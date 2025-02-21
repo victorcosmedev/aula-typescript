@@ -63,3 +63,31 @@ console.log("Array de letras original: " + arrayLetras);
 console.log("Array de letras invertido: " + inverterArray<string>(arrayLetras));
 console.log("Array de números original: " + arrayNumeros);
 console.log("Array de números invertido: " + inverterArray<number>(arrayNumeros));
+
+console.log("\nGenerics - Exercício 4");
+interface Repositorio<T> {
+    salvar(dado: T): void;
+    obterTodos(): T[];
+}
+
+interface Usuario {
+    nome: string;
+    email: string;
+}
+
+class SistemaUsuarios implements Repositorio<Usuario>{
+    private listaDeUsuarios: Usuario[] = [];
+    salvar(dado: Usuario): void {
+        this.listaDeUsuarios.push(dado);
+    }
+
+    obterTodos(): Usuario[]{
+        return this.listaDeUsuarios;
+    }
+}
+
+const sistema = new SistemaUsuarios();
+sistema.salvar({nome: "Victor", email: "rm558856@fiap.com.br"});
+sistema.salvar({nome: "teste", email: "teste@email.com"});
+console.log("Usuários cadastrados: ");
+console.log(sistema.obterTodos());
