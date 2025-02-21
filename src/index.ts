@@ -51,3 +51,15 @@ console.log("Resultado da multiplicação: ", multiplicacao(5, 10));
 console.log("Resultado da multiplicação: ", multiplicacao(3, 2));
 console.log("Resultado da multiplicação: ", multiplicacao(4, 3));
 
+function inverterArray<T>(array: T[]): T[]{
+    return [...array].reverse();
+}
+
+console.log("\nGenerics - Exercício 3");
+let arrayLetras: string[] = ["A", "B", "C", "D"];
+let arrayNumeros: number[] = [1, 2, 3, 4];
+
+console.log("Array de letras original: " + arrayLetras);
+console.log("Array de letras invertido: " + inverterArray<string>(arrayLetras));
+console.log("Array de números original: " + arrayNumeros);
+console.log("Array de números invertido: " + inverterArray<number>(arrayNumeros));
