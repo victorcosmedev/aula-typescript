@@ -91,3 +91,16 @@ sistema.salvar({nome: "Victor", email: "rm558856@fiap.com.br"});
 sistema.salvar({nome: "teste", email: "teste@email.com"});
 console.log("Usuários cadastrados: ");
 console.log(sistema.obterTodos());
+
+console.log("\nManipulação Avançada de Tipos - Exercício 5");
+type RespostaServidor = string | boolean;
+function processarResposta(resposta: RespostaServidor){
+    if (typeof resposta === 'string'){
+        console.log("Resposta é uma string. Valor: " + resposta);
+    } else {
+        console.log("Resposta é um boolean. Valor: " + resposta);
+    }
+}
+
+processarResposta("resposta");
+processarResposta(true);
