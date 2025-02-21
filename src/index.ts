@@ -37,6 +37,17 @@ const meuCarro: Carro = {
     motor: "EA111"
 }
 
-console.log("Interfaces e Tipagem Avançada - Exercício 1");
+console.log("\nInterfaces e Tipagem Avançada - Exercício 1");
 console.log("Dados do carro: ", meuCarro);
+
+interface Multiplicacao {
+    (a: number, b: number): number;
+}
+
+const multiplicacao: Multiplicacao = (a, b) => a * b;
+
+console.log("\nInterfaces e Tipagem Avançada - Exercício 2");
+console.log("Resultado da multiplicação: ", multiplicacao(5, 10));
+console.log("Resultado da multiplicação: ", multiplicacao(3, 2));
+console.log("Resultado da multiplicação: ", multiplicacao(4, 3));
 
