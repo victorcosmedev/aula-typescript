@@ -1,25 +1,25 @@
-// let mensagem: string = "Olá, Typescript!";
-// console.log(mensagem);
+let mensagem: string = "Olá, Typescript!";
+console.log(mensagem);
 
-// let valores: number[] = [10, 20, 30];
-// let somaValores: number = valores.reduce((acc, val) => acc + val, 0);
-// console.log("Soma dos valores:", somaValores);
+let valores: number[] = [10, 20, 30];
+let somaValores: number = valores.reduce((acc, val) => acc + val, 0);
+console.log("Soma dos valores:", somaValores);
 
-// function exibeMensagemPersonalizada(nome: string): string {
-//     return `Olá, ${nome}! Bem-vindo ao TypeScript.`;
-// }
+function exibeMensagemPersonalizada(nome: string): string {
+    return `Olá, ${nome}! Bem-vindo ao TypeScript.`;
+}
 
-// console.log(exibeMensagemPersonalizada("Victor"));
+console.log(exibeMensagemPersonalizada("Victor"));
 
-// class Carro {
-//     constructor(public marca: string, public modelo: string, public ano: number) {}
+class Carro {
+    constructor(public marca: string, public modelo: string, public ano: number) {}
     
-//     exibirDetalhes(): string {
-//         return `${this.marca} ${this.modelo} - ${this.ano}`;
-//     }
-// }
-// const carro = new Carro("Honda", "Civic", 1995);
-// console.log(carro.exibirDetalhes());
+    exibirDetalhes(): string {
+        return `${this.marca} ${this.modelo} - ${this.ano}`;
+    }
+}
+const carro = new Carro("Honda", "Civic", 1995);
+console.log(carro.exibirDetalhes());
 
 
 // EXERCÍCIOS 20/02
